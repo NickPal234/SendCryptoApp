@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendCrypto.WebApi", "SendCrypto.WebApi\SendCrypto.WebApi.csproj", "{2EB059AC-B011-4A08-8355-5F12DE947242}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SendCrypto.WebApi", "SendCrypto.WebApi\SendCrypto.WebApi.csproj", "{2EB059AC-B011-4A08-8355-5F12DE947242}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SendCrypto.Application", "SendCrypto.Application\SendCrypto.Application.csproj", "{BC459C38-B891-4166-8330-475D30388518}"
 EndProject

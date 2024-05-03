@@ -114,4 +114,20 @@ public class RpslsServiceTests
 
         result.Result.Should().Be(expectedResult);
     }
+
+    [Theory]
+    [InlineData(SignalType.Spock, SignalType.Spock, ExodusType.Draw)]
+    [InlineData(SignalType.Spock, SignalType.Scissors, ExodusType.Won)]
+    [InlineData(SignalType.Spock, SignalType.Rock, ExodusType.Won)]
+    [InlineData(SignalType.Spock, SignalType.Lizard, ExodusType.Lost)]
+    [InlineData(SignalType.Spock, SignalType.Paper, ExodusType.Lost)]
+    public async Task PlayAsync_for_Spock(SignalType player, SignalType bot, string expectedResult)
+    {
+        var randomValue = (int)bot * Constants.RangeOfSignalTypes;
+        _webClientMock.Setup(x => x.GetRandomWithRetryAsync()).ReturnsAsync(randomValue);
+
+        var result = await _rpslsService.PlayAsync((int)player);
+
+        result.Result.Should().Be(expectedResult);
+    }
 }
